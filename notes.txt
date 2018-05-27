@@ -1,0 +1,24 @@
+
+
+{ Working Hours }
+{ Break Hours 	}
+{ Off Hours 	}
+
+{ Working Day 	} => { {Working Hours}, {Break Hours}, {Off Hours} }
+{ Day Off 		} => 
+
+{ Schedule      } => { {Working Day}, {Day Off} }
+
+{ Oper          } => { {Working Hours}, {Leave Times} }
+{ Net Oper Time } => { {Working Hours} - {Leave Times} }
+
+{ Net Time      } => { {Active Hours} }
+{ Total Time    } => { {Working Time} +  {Off Time} + {Break Time} }
+
+{ Avai Time 	} => {Total Operadores} *  {Time}
+{ Work orders } = { {Start Time}, {End Time}, {Operator}, {Item Id}, {Std Hour} }
+
+
+[Global Ration]  = [Total Worked Time] / [Total Available Time]
+[Operator Ratio] = [Worked Operator Time] / [Total Available Operator Time]
+
